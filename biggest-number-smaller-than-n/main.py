@@ -10,6 +10,7 @@ def construct(numbers):
 
     return n
 
+
 def smaller_than_n(n, digits):
     digits.sort()
     #print(digits)
