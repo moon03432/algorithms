@@ -1,7 +1,12 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+# Given a string which is RLE encoded, for example 'AAA' is encoded as '3A',
+# Implement a comparison function which operate on RLE encoded string directly:
+# e.g.
+# int compare(const string& lhs, const string& rhs)
+#
+# Note that: "31A2A" IS ALSO legal RLE string. e.g.
+# compare('31A2A1B', '33A1B') -> 0
+# compare('1A2B', '1A')       -> 1
+# compare('1A2A1B', '2B')     -> -1
 
 
 def parse(s, i):
