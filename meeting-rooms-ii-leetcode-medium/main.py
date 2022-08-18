@@ -4,21 +4,22 @@
 #
 # For example, Given [[0, 30],[5, 10],[15, 20]], return 2.
 ###
-from sortedcontainers import SortedList
+import heapq
+
 
 def find_meeting_rooms(meetings):
-    rooms = [0]
+    rooms = []
+    heapq.heappush(rooms, 0)
+
     for x, y in meetings:
         available = False
-        for i in range(len(rooms)):
-            if rooms[i] <= x:
-                available = True
-                rooms[i] = y
-                break
+        if rooms[0] <= x:
+            available = True
+            heapq.heappop(rooms)
+            heapq.heappush(rooms, y)
 
         if not available:
-            room = y
-            rooms.append(room)
+            heapq.heappush(rooms, y)
 
     return len(rooms)
 
