@@ -19,4 +19,4 @@ def generate_parenthesis(n: int):
 
 
 if __name__ == '__main__':
-    print(generate_parenthesis(3))
+    print(generate_parenthesis(4))
